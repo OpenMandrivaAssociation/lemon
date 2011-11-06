@@ -9,12 +9,12 @@
 
 Summary:	The Lemon Parser Generator
 Name:		lemon
-Version:	3.7.6.2
+Version:	3.7.9
 Release:	%release
 License:	Public Domain
 Group:		Development/Other
 URL:		http://www.sqlite.org/
-# taken from http://www.sqlite.org/sqlite-src-3070602.zip
+# taken from http://www.sqlite.org/sqlite-src-3070900.zip
 Source0:	http://www.sqlite.org/cvstrac/getfile/sqlite/tool/lemon.c
 Source1:	http://www.sqlite.org/cvstrac/getfile/sqlite/tool/lempar.c
 Patch0:		lemon-3.7.6.2-system-template.diff
