@@ -58,3 +58,23 @@ rm -rf %{buildroot}
 %{_bindir}/lemon
 %dir %{_datadir}/lemon
 %{_datadir}/lemon/lempar.c
+
+
+%changelog
+* Sun Nov 06 2011 Oden Eriksson <oeriksson@mandriva.com> 3.7.9-1mdv2012.0
++ Revision: 723007
+- 3.7.9
+
+* Mon May 02 2011 Oden Eriksson <oeriksson@mandriva.com> 3.7.6.2-1
++ Revision: 662078
+- 3.7.6.2
+- grab S0 + S1 from sqlite-src-3070602.zip
+- sync with fedora
+
+* Fri Apr 29 2011 Oden Eriksson <oeriksson@mandriva.com> 3.7.4-1
++ Revision: 660623
+- import lemon
+
+
+* Fri Apr 29 2011 Oden Eriksson <oeriksson@mandriva.com> 3.7.4-1mdv2010.2
+- initial Mandriva package
