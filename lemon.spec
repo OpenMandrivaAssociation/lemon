@@ -1,24 +1,14 @@
-%if %mandriva_branch == Cooker
-# Cooker
-%define release %mkrel 1
-%else
-# Old distros
-%define subrel 1
-%define release %mkrel 0
-%endif 
-
 Summary:	The Lemon Parser Generator
 Name:		lemon
 Version:	3.7.9
-Release:	%release
+Release:	1
 License:	Public Domain
 Group:		Development/Other
-URL:		http://www.sqlite.org/
+Url:		http://www.sqlite.org/
 # taken from http://www.sqlite.org/sqlite-src-3070900.zip
 Source0:	http://www.sqlite.org/cvstrac/getfile/sqlite/tool/lemon.c
 Source1:	http://www.sqlite.org/cvstrac/getfile/sqlite/tool/lempar.c
 Patch0:		lemon-3.7.6.2-system-template.diff
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Lemon is an LALR(1) parser generator for C or C++. It does the same job as
@@ -31,50 +21,23 @@ suitable for use in long-running programs such as graphical user interfaces or
 embedded controllers.
 
 %prep
-
 %setup -q -c -T
 cp %{SOURCE0} .
 cp %{SOURCE1} .
 %patch0 -p0
 
 %build
-
 gcc %{optflags} -o lemon lemon.c
 
 %install
-rm -rf %{buildroot}
-
 install -d %{buildroot}%{_bindir}
 install -d %{buildroot}%{_datadir}/lemon
 
 install -m0755 lemon %{buildroot}%{_bindir}/
 install -m0644 lempar.c %{buildroot}%{_datadir}/lemon/lempar.c
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %{_bindir}/lemon
 %dir %{_datadir}/lemon
 %{_datadir}/lemon/lempar.c
 
-
-%changelog
-* Sun Nov 06 2011 Oden Eriksson <oeriksson@mandriva.com> 3.7.9-1mdv2012.0
-+ Revision: 723007
-- 3.7.9
-
-* Mon May 02 2011 Oden Eriksson <oeriksson@mandriva.com> 3.7.6.2-1
-+ Revision: 662078
-- 3.7.6.2
-- grab S0 + S1 from sqlite-src-3070602.zip
-- sync with fedora
-
-* Fri Apr 29 2011 Oden Eriksson <oeriksson@mandriva.com> 3.7.4-1
-+ Revision: 660623
-- import lemon
-
-
-* Fri Apr 29 2011 Oden Eriksson <oeriksson@mandriva.com> 3.7.4-1mdv2010.2
-- initial Mandriva package
