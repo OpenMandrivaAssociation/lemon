@@ -27,7 +27,7 @@ cp %{SOURCE1} .
 %patch0 -p0
 
 %build
-gcc %{optflags} -o lemon lemon.c
+%{__cc} %{optflags} -o lemon lemon.c
 
 %install
 install -d %{buildroot}%{_bindir}
