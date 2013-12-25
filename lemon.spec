@@ -8,6 +8,7 @@ Url:		http://www.sqlite.org/
 # taken from http://www.sqlite.org/sqlite-src-3070900.zip
 Source0:	http://www.sqlite.org/cvstrac/getfile/sqlite/tool/lemon.c
 Source1:	http://www.sqlite.org/cvstrac/getfile/sqlite/tool/lempar.c
+Source2:	lemon.rpmlintrc
 Patch0:		lemon-3.7.6.2-system-template.diff
 
 %description
