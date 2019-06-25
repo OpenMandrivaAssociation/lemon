@@ -1,6 +1,6 @@
 Summary:	The Lemon Parser Generator
 Name:		lemon
-Version:	3.7.9
+Version:	3.21.0
 Release:	10
 License:	Public Domain
 Group:		Development/Other
