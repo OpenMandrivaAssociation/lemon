@@ -1,7 +1,7 @@
 Summary:	The Lemon Parser Generator
 Name:		lemon
 Version:	3.21.0
-Release:	10
+Release:	11
 License:	Public Domain
 Group:		Development/Other
 Url:		http://www.sqlite.org/
